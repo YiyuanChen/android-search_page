@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pet_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fuppy.fuppyandroid.DisplayPetDetailActivity"
+    android:background="@drawable/back_ground">
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:id="@+id/DetailImageView"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/DetailImageView"
+        android:id="@+id/scrollView2"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:layout_marginTop="10dp">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Saggy"
+                android:id="@+id/petName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12yrs"
+                android:id="@+id/petAge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:id="@+id/petGender" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/petSize"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="vfdnvkdfvdfvkldf"
+                android:id="@+id/petDescription" />
+
+            <Button
+                android:text="Visit Shelter"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/buttonshape"
+                android:id="@+id/shelter_info"
+                android:textAlignment="center"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="47dp"
+                android:layout_marginRight="50dp"
+                android:onClick="showShelter"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageButton
+        android:text="Next"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_next"
+        android:src="@mipmap/next"
+        android:layout_marginBottom="66dp"
+        android:layout_above="@+id/scrollView2"
+        android:layout_toRightOf="@+id/DetailImageView"
+        android:layout_toEndOf="@+id/DetailImageView" />
+
+    <ImageButton
+        android:text="Previous"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_previous"
+        android:src="@mipmap/previous"
+        android:layout_alignTop="@+id/button_next"
+        android:layout_toLeftOf="@+id/DetailImageView"
+        android:layout_toStartOf="@+id/DetailImageView" />
+
+</RelativeLayout>
